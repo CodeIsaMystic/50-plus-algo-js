@@ -33,7 +33,7 @@ function showOutput() {
   else if (current > 0) message = "its morning";
   else message = "something is wrong";
 
-  output2.innerHTML = "<h1>" + message + "</h1>";
+  output2.innerHTML = "<h2>" + message + "</h2>";
 
   //console.log(date.getHours());
   //console.log("works");
