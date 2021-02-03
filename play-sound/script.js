@@ -13,14 +13,24 @@ for (let i = 0; i < animals.length; i++) {
   animals[i].addEventListener("click", function () {
     let animal = this.innerHTML;
     let lowerAnimal = animal.toLowerCase();
-    makeSound(lowerAnimal)
     //console.log(animal);
+    makeSound(lowerAnimal);
+    addStyle(lowerAnimal);
   });
 }
 
 
 
 /// **************************************
+function addStyle(name) {
+  console.log(name);
+  let activeElement = document.querySelector("." + name);
+  console.log(activeElement);
+  activeElement.classList.add("active");
+  setTimeout(function () {
+    activeElement.classList.remove("active");
+  }, 250);
+}
 function makeSound(name) {
   //console.log(name);
 
@@ -34,11 +44,9 @@ function makeSound(name) {
       sound2.play();
       break;
     case "dog":
-      let sound3 = new Audio("sounds/bark.mp3");
+      let sound3 = new Audio("sounds/dog.mp3");
       sound3.play();
       break;
-    /*default
-      break;*/
   }
 }
 
