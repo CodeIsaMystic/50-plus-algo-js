@@ -35,11 +35,23 @@ function endPlay() {
   let date = new Date();
   endTime = date.getTime();
   let totalTime = ((endTime - startTime) / 1000);
-  console.log(totalTime);
+  //console.log(totalTime);
   let str = playText.value;
   // count words
   // divide by total time words/per minute
   // output finale message to player
+  let wordCount = wordCounter(str);
+  let speed = Math.round((wordCount / totalTime) * 60);
+  //console.log(speed);
+
+  let finalMessage = "You typed at " + speed + "words per minute.";
+  message.innerHTML = finalMessage;
+}
+
+function wordCounter(strWords) {
+  let response = strWords.split('').length;
+  //console.log(response);
+  return response;
 }
 
 
