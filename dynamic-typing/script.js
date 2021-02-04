@@ -13,7 +13,7 @@ const button = document.querySelector("button");
 
 /// **********************************************
 button.addEventListener("click", function () {
-  console.log(this.innerText);
+  //console.log(this.innerText);
 
   if (this.innerText == "Start") {
     playText.disabled = false;
@@ -22,7 +22,9 @@ button.addEventListener("click", function () {
 });
 
 function playGame() {
-  console.log("func ran!!")
+  //console.log("func ran!!")
+  let randomNum = Math.floor(Math.random() * 10);
+  console.log(randomNum);
 }
 
 
