@@ -24,37 +24,50 @@ button.addEventListener("click", function () {
   else if (this.innerText == "Done") {
     playText.disabled = true;
     button.innerText = "Start";
-    endPlay();
+    endGame();
   }
 });
 
 
 
 /// **********************************************
-function endPlay() {
+function endGame() {
   let date = new Date();
   endTime = date.getTime();
   let totalTime = ((endTime - startTime) / 1000);
   //console.log(totalTime);
   let str = playText.value;
 
-  // count letters
-  let letterCount = letterCounter(str);
-  // divide by total time letters/per minute
-  let speed = Math.round((letterCount / totalTime) * 60);
+  // count words
+  let wordCount = wordCounter(str);
+  // divide by total time words/per minute
+  let speed = Math.round((wordCount / totalTime) * 60);
   // output finale message to player
-  let finalMessage = "You typed at " + speed + " letters per minute.";
+  let finalMessage = "You typed at " + speed + " words per minute.";
   //console.log(speed);
-  if (str != message.innerText) {
-    finalMessage += "<br> There was some errors in the wording";
-  }
+  finalMessage += "<br>" + compareWords(message.innerText, str);
+
   message.innerHTML = finalMessage;
 }
 
-function letterCounter(strLetters) {
-  let response = strLetters.split('').length;
+function wordCounter(strWords) {
+  let response = strWords.split(' ').length;
   //console.log(response);
   return response;
+}
+
+function compareWords(str1, str2) {
+  let words1 = str1.split(' ');
+  let words2 = str2.split(' ');
+  let count = 0;
+  words1.forEach(function (item, index) {
+    //console.log(item, words2[index]);
+    if (item == words2[index]) {
+      count++;
+    }
+  })
+  //console.log(count + " correct out of " + words1.length);
+  return (count + " correct out of " + words1.length + " words");
 }
 
 
