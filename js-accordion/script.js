@@ -17,17 +17,26 @@ function toggleElements(e) {
   console.log("this: ", this);
   console.log("target event:", e.target);*/
 
-  /* adding only one element atr the time
-  accordion.forEach(function (element) {
-    element.classList.remove('active');
-  });
-  */
+  //console.log(e.target.parentElement);
 
+  /* adding only one element atr the time*/
+  accordion.forEach(function (element) {
+    if (e.target.parentElement === element) {
+      element.classList.toggle('active');
+    }
+    else {
+      element.classList.remove('active');
+    }
+  });
+
+
+  /*
   const allActives = document.querySelectorAll('.active');
   //console.log(allActives);
   allActives.forEach(function (element) {
     element.classList.remove('active');
   })
-
   this.classList.toggle('active');
+  */
+
 } 
