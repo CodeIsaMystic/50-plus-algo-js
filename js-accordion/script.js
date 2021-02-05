@@ -13,7 +13,16 @@ accordion.forEach(function (element) {
 
 /// ********************************
 function toggleElements(e) {
-  console.log("event: ", e);
+  /*console.log("event: ", e);
   console.log("this: ", this);
-  console.log("target event:", e.target);
-}
+  console.log("target event:", e.target);*/
+
+
+
+
+
+
+
+
+  this.classList.toggle('active');
+} 

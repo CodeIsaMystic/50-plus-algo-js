@@ -1,5 +1,10 @@
-.main .abody {
+
+h3, ul {
+  margin: 0;
   padding: 5px;
+}
+
+.main .abody {
   border: 1px solid #eee;
   display: none;
 }
@@ -10,9 +15,9 @@
 
 .main .ahead {
   background-color: #333;
-  padding: 5px;
+  padding: 0;
   font-size: 1.6em;
-  margin: 5px 0;
+  margin: 5px;
   color: white;
   cursor: pointer;
 }
