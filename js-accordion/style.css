@@ -4,6 +4,10 @@ h3, ul {
   padding: 5px;
 }
 
+ul {
+  padding-left: 35px;
+}
+
 .main .abody {
   border: 1px solid #eee;
   display: none;

@@ -17,7 +17,9 @@ function toggleElements(e) {
   console.log("this: ", this);
   console.log("target event:", e.target);*/
 
-
+  accordion.forEach(function (element) {
+    element.classList.remove('active');
+  });
 
 
 
