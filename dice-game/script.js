@@ -30,6 +30,8 @@ button.addEventListener("click", function () {
 /// **********************************
 function roll(num) {
   let rNumber = Math.floor(Math.random() * num) + 1;
+  let n = 9855 + rNumber;
+  let char = "&#" + n + ";";
 
-  return rNumber;
+  return rNumber + " " + char;
 }
