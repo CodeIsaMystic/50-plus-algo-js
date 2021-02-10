@@ -41,7 +41,10 @@ button.addEventListener("click", function () {
 
 /// **********************************************
 function createWord() {
-  console.log("create word");
+  //console.log("create word");
+  let randomIndex = Math.floor(Math.random() * myArray.length);
+  let tempWord = myArray[randomIndex];
+  return tempWord;
 }
 
 
