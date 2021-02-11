@@ -55,6 +55,7 @@ function scrollingEle() {
       sElement.style.top = cElement.clientHeight + "px";
     }
     output.innerHTML = "Scroll speed " + scrollSpeed + " Y position " + posY;
+    output.style.margin = "20px";
   }
 };
 
