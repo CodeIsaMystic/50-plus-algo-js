@@ -2,7 +2,7 @@
   display: none;
 }
 
-.modalWrapper .showModal {
+.modalWrapper.showModal {
   display: block;
   position: fixed;
   top: 0;
@@ -13,7 +13,15 @@
   overflow-y: scroll;
 }
 
-.modalBody .h2 {
+.modalBody footer {
+  text-align: center;
+  font-size: 0.8em;
+  background-color: #222;
+  color: #fff;
+  padding: 5px;
+}
+
+.modalBody .title {
   background-color: #000;
   color: #fff;
   font-size: 2em;
