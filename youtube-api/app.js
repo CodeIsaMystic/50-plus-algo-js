@@ -1,20 +1,29 @@
 //https://developers.google.com/youtube/v3/quickstart/js
 const api = '';
+
+
 const output = document.querySelector('.output');
 const searchTerm = document.querySelector('input');
 searchTerm.setAttribute('value', 'test');
+
 const btnPrev = document.createElement('button');
 btnPrev.setAttribute('disabled', true);
 btnPrev.textContent = 'Prev';
+
 document.body.appendChild(btnPrev);
+
 const btnNext = document.createElement('button');
 btnNext.setAttribute('disabled', true);
 btnNext.textContent = 'Next';
+
 document.body.appendChild(btnNext);
+
 const btns = document.querySelectorAll('button');
 btns.forEach(function (btn) {
     btn.addEventListener('click', ySearch);
 })
+
+
 
 function ySearch(e) {
     let search = searchTerm.value;
@@ -59,6 +68,8 @@ function ySearch(e) {
         console.log(error);
     })
 }
+
+
 
 function show(data) {
     console.log(data);
